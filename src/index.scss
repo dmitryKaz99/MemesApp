@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: "Fredoka", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #000;
+
+  overflow-y: scroll;
+}
+
+.active_body {
+  overflow: hidden;
+  padding-right: 15px;
+
+  header {
+    padding-right: 65px;
+  }
+}
+@media (max-width: 575px) {
+  .active_body {
+    padding-right: 1px;
+
+    header {
+      padding-right: 51px;
+    }
+  }
+}
+
+// button and input
+button {
+  border: none;
+  outline: none;
+  background: #e6399bc4;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Fredoka", sans-serif;
+  font-size: 16px;
+  transition: background 0.2s linear;
+
+  &:hover {
+    background: #e6399b;
+  }
+}
+
+input {
+  outline: none;
+  border: 1px solid #e6399bc4;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: "Fredoka", sans-serif;
+}
+
+// scrollbar
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff4040;
+  border: 1px solid #a60000;
+}

@@ -1,0 +1,150 @@
+// common
+.picture {
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 36px 0px;
+}
+.picture_big {
+  max-width: 300px;
+}
+
+// memes
+.memes {
+  padding-top: 160px;
+  text-align: center;
+  background: #fff;
+
+  .memes_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .meme {
+      width: 33%;
+      padding: 0 10px;
+      margin-bottom: 20px;
+
+      .meme_wrapper {
+        position: relative;
+        border-radius: 5px;
+        border: 1px solid #e6399b42;
+        padding: 15px;
+        transition: box-shadow 0.2s linear;
+
+        &:hover {
+          box-shadow: #e6399bc4 0px 0px 5px 0px;
+        }
+
+        .top {
+          position: absolute;
+          right: 15px;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #64df85;
+          color: #fff;
+          cursor: default;
+        }
+
+        .desc {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          .title {
+            max-width: 250px;
+            margin-bottom: 15px;
+          }
+        }
+
+        button:nth-child(2) {
+          margin-left: 10px;
+        }
+        .btn_like {
+          background: #ff4040;
+        }
+      }
+    }
+
+    @media (max-width: 1150px) {
+      .meme {
+        width: 50%;
+      }
+    }
+    @media (max-width: 750px) {
+      .meme {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// form
+.form_meme {
+  display: flex;
+  flex-direction: column;
+
+  .form_inputs {
+    margin-bottom: 15px;
+
+    input {
+      width: 100%;
+      max-width: 250px;
+    }
+
+    input:nth-child(2) {
+      margin-left: 10px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .form_inputs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      input {
+        max-width: 300px;
+      }
+
+      input:nth-child(1) {
+        margin-bottom: 15px;
+      }
+
+      input:nth-child(2) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  button {
+    align-self: center;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.favorite {
+  color: #ff4040;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+// result
+.result_meme {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  button {
+    align-self: center;
+    width: 100%;
+    max-width: 300px;
+  }
+}
