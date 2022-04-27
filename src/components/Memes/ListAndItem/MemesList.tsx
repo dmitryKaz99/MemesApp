@@ -19,13 +19,12 @@ const MemesList: FC<IMemesList> = ({ memes, createCustomMeme }) => {
     [memesFavorites, setMemesFavorites] = useState<IMeme[]>([]);
 
   useEffect(() => {
-    const arrLocal = JSON.parse(
-      localStorage.getItem(LOCAL_STORAGE_KEY) || "[]"
-    );
-    setArrGlobal(arrLocal);
+    const arrLocal = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) as any);
+    arrLocal ? setArrGlobal(arrLocal) : setArrGlobal([0]);
   }, []);
   useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(arrGlobal));
+    arrGlobal.length &&
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(arrGlobal));
   }, [arrGlobal]);
 
   useMemo(() => {
